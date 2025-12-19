@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "hyperhexcast",
+  "version": "${version}",
+  "name": "Hyper's Hexcast addon",
+  "description": "Another HexCasting addon I guess",
+  "authors": [
+    "janIpen"
+  ],
+  "contact": {
+    "homepage": "https://janipen.github.io/hyper_hexcast",
+    "sources": "https://github.com/janIpen/hyper_hexcast"
+  },
+  "license": "MIT",
+  "icon": "assets/hyperhexcast/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [{
+      "adapter": "kotlin",
+      "value": "io.github.janipen.hyperhexcast.fabric.FabricHyperhexcast"
+    }],
+    "client": [{
+      "adapter": "kotlin",
+      "value": "io.github.janipen.hyperhexcast.fabric.FabricHyperhexcastClient"
+    }],
+    "server": [{
+      "adapter": "kotlin",
+      "value": "io.github.janipen.hyperhexcast.fabric.FabricHyperhexcastServer"
+    }],
+    "fabric-datagen": [{
+      "adapter": "kotlin",
+      "value": "io.github.janipen.hyperhexcast.fabric.datagen.FabricHyperhexcastDatagen"
+    }],
+    "modmenu": [{
+      "adapter": "kotlin",
+      "value": "io.github.janipen.hyperhexcast.fabric.FabricHyperhexcastModMenu"
+    }]
+  },
+  "mixins": [
+    "hyperhexcast-common.mixins.json",
+    "hyperhexcast-fabric.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "${versions.minecraft}",
+    "fabricloader": ">=${versions.fabric_loader}",
+    "fabric-api": ">=${versions.fabric_api}",
+    "fabric-language-kotlin": ">=${versions.kotlin_fabric}",
+    "architectury": ">=${versions.architectury}",
+    "hexcasting": ">=${versions.hexcasting_dependency}",
+    "cloth-config": ">=${versions.clothConfig}"
+  },
+  "suggests": {
+    "modmenu": ">=${versions.modMenu}"
+  }
+}
