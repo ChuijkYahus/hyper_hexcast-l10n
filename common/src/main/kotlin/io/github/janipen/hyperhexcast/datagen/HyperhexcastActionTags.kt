@@ -1,9 +1,10 @@
 package io.github.janipen.hyperhexcast.datagen
 
 import at.petrak.hexcasting.api.casting.ActionRegistryEntry
-import at.petrak.hexcasting.api.mod.HexTags
+//import at.petrak.hexcasting.api.casting.castables.SpellAction
+//import at.petrak.hexcasting.api.mod.HexTags
 import at.petrak.hexcasting.common.lib.HexRegistries
-import io.github.janipen.hyperhexcast.registry.HyperhexcastActions
+//import io.github.janipen.hyperhexcast.registry.HyperhexcastActions
 import net.minecraft.core.HolderLookup
 import net.minecraft.data.PackOutput
 import net.minecraft.data.tags.TagsProvider
@@ -17,12 +18,12 @@ class HyperhexcastActionTags(
 ) : TagsProvider<ActionRegistryEntry>(output, HexRegistries.ACTION, provider) {
     override fun addTags(provider: HolderLookup.Provider) {
         // per-world great spells
-        for (entry in arrayOf(
-            HyperhexcastActions.GREAT_CONGRATULATE,
-        )) {
-            tag(HexTags.Actions.CAN_START_ENLIGHTEN).add(entry.key)
-            tag(HexTags.Actions.PER_WORLD_PATTERN).add(entry.key)
-            tag(HexTags.Actions.REQUIRES_ENLIGHTENMENT).add(entry.key)
-        }
+        // commented out as addon has no great spells
+//        for (entry in arrayOf(
+//        )) {
+//            tag(HexTags.Actions.CAN_START_ENLIGHTEN).add(entry.key)
+//            tag(HexTags.Actions.PER_WORLD_PATTERN).add(entry.key)
+//            tag(HexTags.Actions.REQUIRES_ENLIGHTENMENT).add(entry.key)
+//        }
     }
 }

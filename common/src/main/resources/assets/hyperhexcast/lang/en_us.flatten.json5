@@ -1,43 +1,51 @@
 {
-  hyperhexcast: {
-    book: {
-      patterns: {
-        spells: {
-          dummy_spells: {
-            "": "Dummy Spells",
-            congratulate: "Remove an entity from the stack, then congratulate them.",
-          },
-        },
-        great_spells: {
-          dummy_great_spells: {
-            "": "Dummy Great Spells",
-            "congratulate/great": "Same as $(l:patterns/spells/dummy_spells#hyperhexcast:congratulate)$(action)Congratulate/$, but as a great spell.",
-          },
+  "hyperhexcast.book.patterns": {
+      maths: {
+        "": "Other Math Operations",
+        range: "Returns a sorted list of integers below the input. Mishaps if the input is less than 0.",
+      },
+      spells: {
+        mounts: {
+          "": "Mount Spells",
+          mount: "Make an entity ride another entity. Costs about 2 $(l:items/amethyst)$(item)Amethyst Dust/$, or 1 if you are at the top of the stack.",
+          text1: "It seems that there are cases where nature won't allow this spell to execute, but also won't mishap? This seems very interesting...",
+          dismount: "Make an entity stop riding the entity they are riding. Costs about 2 $(l:items/amethyst)$(item)Amethyst Dust/$, or 1 when cast on yourself (but why would you).",
         },
       },
-    },
+      great_spells: {
+      },
+      mounts: {
+        "": "Mount Patterns",
+        getmt: "Returns the entity that a given entity is riding. Null if the entity isn't riding anything.",
+        getpsgr: "Returns a list of entities that are riding a given entity.",
+        isdrvr: "Returns whether or not the given entity is considered the \"Driver\" of its vehicle. Null if the entity isn't riding a vehicle.",
+      },
   },
 
   hexcasting: {
     action: {
       "hyperhexcast:": {
-        congratulate: "Congratulate Player",
-        "congratulate/great": "Great Congrats!",
+        range: "Inclining Purification",
+        getmt: "Jockey's Purification",
+        getpsgr: "Ferryman's Purification",
+        isdrvr: "Controller's Purification",
+        mount: "Mount Entity",
+        dismount: "Dismount Entity",
       },
 
       // use this to add shortened versions of pattern names if the full name won't fit in the ingame book
       // you don't need to add an entry for every pattern - the above value will be used as a default
       book: {
-        "hyperhexcast:": {
-          congratulate: "Congratulate",
-        },
       },
+
+      mishap: {
+        entities_too_far: "%s is too far from %s"
+      }
     },
   },
 
   text: {
     hyperhexcast: {
-      congrats: "Tell %1$s they're doing a good job!",
     },
 
     "autoconfig.hyperhexcast": {

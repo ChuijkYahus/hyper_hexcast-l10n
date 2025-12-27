@@ -6,15 +6,25 @@ import at.petrak.hexcasting.api.casting.math.HexDir
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import at.petrak.hexcasting.common.lib.HexRegistries
 import at.petrak.hexcasting.common.lib.hex.HexActions
-import io.github.janipen.hyperhexcast.casting.actions.spells.OpCongratulate
+import io.github.janipen.hyperhexcast.casting.actions.Dismount
+import io.github.janipen.hyperhexcast.casting.actions.GetMount
+import io.github.janipen.hyperhexcast.casting.actions.GetPsgr
+import io.github.janipen.hyperhexcast.casting.actions.IsDriver
+import io.github.janipen.hyperhexcast.casting.actions.Mount
+import io.github.janipen.hyperhexcast.casting.actions.OpRange
 
 object HyperhexcastActions : HyperhexcastRegistrar<ActionRegistryEntry>(
     HexRegistries.ACTION,
     { HexActions.REGISTRY },
 ) {
-    val CONGRATULATE = make("congratulate", HexDir.WEST, "eed", OpCongratulate)
+    val RANGE = make("range", HexDir.NORTH_EAST, "qedd", OpRange)
 
-    val GREAT_CONGRATULATE = make("congratulate/great", HexDir.EAST, "qwwqqqwwqwded", OpCongratulate)
+    val GETMOUNT = make("getmt", HexDir.SOUTH_EAST, "eaded", GetMount)
+    val GETPSGR = make("getpsgr", HexDir.SOUTH_WEST, "aqadq", GetPsgr)
+    val ISDRIVER = make("isdrvr", HexDir.SOUTH_WEST, "aqadea", IsDriver)
+
+    val MOUNT = make("mount", HexDir.SOUTH_EAST, "eadewde", Mount)
+    val DISMOUNT = make("dismount", HexDir.WEST, "qawqadq", Dismount)
 
     private fun make(name: String, startDir: HexDir, signature: String, action: Action) =
         make(name, startDir, signature) { action }
