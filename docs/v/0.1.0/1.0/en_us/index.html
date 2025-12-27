@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Hyper's Hexcast addon Book</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Another HexCasting addon I guess" />
+      <meta name="author" content="janIpen" />
+        <link rel="None" type="image/ico" href="favicon.ico" />
+        <link rel="icon" type="image/png" href="favicon-16x16.png" />
+        <link rel="icon" type="image/png" href="favicon-32x32.png" />
+        <link rel="icon" type="image/png" href="favicon-64x64.png" />
+        <link rel="icon" type="image/png" href="favicon-96x96.png" />
+        <link rel="icon" type="image/png" href="favicon-180x180.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-167x167.png" />
+        <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png" />
+        <link rel="None" type="image/png" href="mstile-70x70.png" />
+        <link rel="None" type="image/png" href="mstile-270x270.png" />
+        <link rel="None" type="image/png" href="mstile-310x310.png" />
+        <link rel="None" type="image/png" href="mstile-310x150.png" />
+        <link rel="shortcut icon" type="image/png" href="favicon-196x196.png" />
+      <link rel="mask-icon" href="https://raw.githubusercontent.com/hexdoc-dev/hexdoc/main/media/safari-pinned-tab.svg" color="#332233">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Hyper's Hexcast addon Book" />
+<meta property="og:image" content="https://janipen.github.io/hyper_hexcast/v/0.1.0/1.0/en_us/icon.png" />
+<meta property="og:url" content="https://janipen.github.io/hyper_hexcast/v/0.1.0/1.0/en_us" />
+<meta property="og:description" content="Another HexCasting addon I guess" />
+<meta property="og:site_name" content="Hyper&#39;s Hexcast addon (0.1.0)" />
+      <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="textures.css">
+      <noscript>
+        <style>
+          /* for accessibility */
+          .spoilered {
+            filter: none !important;
+          }
+        </style>
+      </noscript>
+        <script type="module" src="index.js"></script>
+  <script type="module" src="hexcasting.js"></script>
+  <script type="module" src="hexcasting_render.js"></script>
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#navbar-collapse"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../../../..">Hyper's Hexcast addon Book</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+            <li>
+    <a
+      href="https://github.com/janIpen/hyper_hexcast/tree/0402775c05557cd307243c368c9aa1001680ebdb"
+        target="_blank"
+      class="navbar-link"
+      role="button"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >GitHub <i class="bi bi-box-arrow-up-right external-link-icon"></i></a>
+  </li>
+        <li class="dropdown">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >0.1.0 <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="version-dropdown"></ul>
+        </li>
+        <li class="dropdown">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >English (United States) <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-menu-left" id="lang-dropdown"></ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" style="margin-top: 3em;">
+  <blockquote>
+      <h1><p>This is the online version of the Hyper&#39;s Hexcast addon documentation.</p></h1>
+      <p><strong>Entries which are blurred are spoilers</strong>. Click to reveal them, but be aware that they may spoil endgame progression. Alternatively, click <a href="?nospoiler">here</a> to get a version with all spoilers showing.</p>
+      <span id="old-version-notice" class="hidden">
+        <br />
+        <p><i>The past is a foreign country; they do things differently there.</i></p>
+      </span>
+  </blockquote>
+</div>
+<div class="container">
+<div id="table-of-contents"></div>
+<nav class="toc-container">
+  <h2 class="page-header">
+    Table of <span class="nobr">Contents<a
+      href="javascript:void(0)"
+      class="permalink toggle-link small"
+      data-target="toc-category"
+      title="Toggle all"
+    ><i class="bi bi-list-nested"></i></a><a
+    href="#table-of-contents"
+    class="permalink small toc-permalink"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></span>
+  </h2>
+    <details class="toc-category">
+      <summary><a href="#patterns" class="toc-elem "><img
+      title="Bookshelf"
+      alt="Bookshelf"
+      src="https://hexdoc-dev.github.io/hexdoc-minecraft/v/1.20.1/1.0.dev1/assets/minecraft/textures/block/bookshelf.png"
+      loading="lazy"
+      class="item-texture  texture "
+    > Patterns</a></summary>
+      <ul>
+          <li><a href="#patterns/squareroot" class="toc-elem "><img
+      title="Spruce Sign"
+      alt="Spruce Sign"
+      src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/spruce_sign.png"
+      loading="lazy"
+      class="item-texture  texture pixelated"
+    > Other Math Operations</a></li>
+          <li><a href="#patterns/mounts" class="toc-elem "><img
+      title="Saddle"
+      alt="Saddle"
+      src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/saddle.png"
+      loading="lazy"
+      class="item-texture  texture pixelated"
+    > Mount Patterns</a></li>
+      </ul>
+    </details>
+    <details class="toc-category">
+      <summary><a href="#patterns/spells" class="toc-elem "><img
+      title="Enchanted Book"
+      alt="Enchanted Book"
+      src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/enchanted_book.png"
+      loading="lazy"
+      class="item-texture  texture pixelated"
+    > Spells</a></summary>
+      <ul>
+          <li><a href="#patterns/spl_mounts" class="toc-elem "><img
+      title="Saddle"
+      alt="Saddle"
+      src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/saddle.png"
+      loading="lazy"
+      class="item-texture  texture pixelated"
+    > Mount Spells</a></li>
+      </ul>
+    </details>
+</nav>
+  <main class="book-body">
+<section id="patterns">
+    <h2 class="category-title page-header">
+    <img
+      title="Bookshelf"
+      alt="Bookshelf"
+      src="https://hexdoc-dev.github.io/hexdoc-minecraft/v/1.20.1/1.0.dev1/assets/minecraft/textures/block/bookshelf.png"
+      loading="lazy"
+      class="item-texture  texture "
+    >Patterns<a
+    href="#table-of-contents"
+    class="permalink small"
+    title="Jump to top"
+  ><i class="bi bi-box-arrow-up"></i></a><a
+    href="#patterns"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h2>
+    <p>A list of all the patterns I&#39;ve discovered, as well as what they do.</p>
+<div id="patterns/squareroot" class="entry">
+    <h3 class="entry-title page-header">
+    <img
+      title="Spruce Sign"
+      alt="Spruce Sign"
+      src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/spruce_sign.png"
+      loading="lazy"
+      class="item-texture  texture pixelated"
+    >Other Math Operations<a
+    href="#table-of-contents"
+    class="permalink small"
+    title="Jump to top"
+  ><i class="bi bi-box-arrow-up"></i></a><a
+    href="#patterns/squareroot"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h3>
+  <div id="patterns/squareroot@hyperhexcast:range" class="">
+<h4 class="pattern-title">Inclining Purification (int → [int])<a
+    href="#patterns/squareroot@hyperhexcast:range"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
+  <details class="details-collapsible">
+    <summary class="collapse-details collapse-spell"></summary>
+    <div class="dropdown spell-settings-dropdown">
+      <span
+        href=""
+        class="dropdown-toggle spell-settings-toggle"
+        data-toggle="dropdown"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="bi bi-gear-fill"></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Renders</a>
+          <ul class="dropdown-menu dropdown-menu-left render-dropdowns"></ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Palettes</a>
+          <ul class="dropdown-menu dropdown-menu-left palette-dropdowns"></ul>
+        </li>
+      </ul>
+    </div>
+      <canvas
+        class="spell-viz"
+        width="216"
+        height="216"
+        data-string="qedd"
+        data-start="north_east"
+        data-per-world="False"
+      >Your browser does not support visualizing patterns. Pattern code: qedd</canvas>
+  </details>
+      <p>Returns a sorted list of integers below the input. Mishaps if the input is less than 0.</p>
+  </div>
+<br />
+</div>
+<div id="patterns/mounts" class="entry">
+    <h3 class="entry-title page-header">
+    <img
+      title="Saddle"
+      alt="Saddle"
+      src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/saddle.png"
+      loading="lazy"
+      class="item-texture  texture pixelated"
+    >Mount Patterns<a
+    href="#table-of-contents"
+    class="permalink small"
+    title="Jump to top"
+  ><i class="bi bi-box-arrow-up"></i></a><a
+    href="#patterns/mounts"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h3>
+  <div id="patterns/mounts@hyperhexcast:getmt" class="">
+<h4 class="pattern-title">Jockey&#39;s Purification (entity → entity)<a
+    href="#patterns/mounts@hyperhexcast:getmt"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
+  <details class="details-collapsible">
+    <summary class="collapse-details collapse-spell"></summary>
+    <div class="dropdown spell-settings-dropdown">
+      <span
+        href=""
+        class="dropdown-toggle spell-settings-toggle"
+        data-toggle="dropdown"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="bi bi-gear-fill"></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Renders</a>
+          <ul class="dropdown-menu dropdown-menu-left render-dropdowns"></ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Palettes</a>
+          <ul class="dropdown-menu dropdown-menu-left palette-dropdowns"></ul>
+        </li>
+      </ul>
+    </div>
+      <canvas
+        class="spell-viz"
+        width="216"
+        height="216"
+        data-string="eaded"
+        data-start="south_east"
+        data-per-world="False"
+      >Your browser does not support visualizing patterns. Pattern code: eaded</canvas>
+  </details>
+      <p>Returns the entity that a given entity is riding. Null if the entity isn&#39;t riding anything.</p>
+  </div>
+<br />
+  <div id="patterns/mounts@hyperhexcast:getpsgr" class="">
+<h4 class="pattern-title">Ferryman&#39;s Purification (entity → [entity])<a
+    href="#patterns/mounts@hyperhexcast:getpsgr"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
+  <details class="details-collapsible">
+    <summary class="collapse-details collapse-spell"></summary>
+    <div class="dropdown spell-settings-dropdown">
+      <span
+        href=""
+        class="dropdown-toggle spell-settings-toggle"
+        data-toggle="dropdown"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="bi bi-gear-fill"></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Renders</a>
+          <ul class="dropdown-menu dropdown-menu-left render-dropdowns"></ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Palettes</a>
+          <ul class="dropdown-menu dropdown-menu-left palette-dropdowns"></ul>
+        </li>
+      </ul>
+    </div>
+      <canvas
+        class="spell-viz"
+        width="216"
+        height="216"
+        data-string="aqadq"
+        data-start="south_west"
+        data-per-world="False"
+      >Your browser does not support visualizing patterns. Pattern code: aqadq</canvas>
+  </details>
+      <p>Returns a list of entities that are riding a given entity.</p>
+  </div>
+<br />
+  <div id="patterns/mounts@hyperhexcast:isdrvr" class="">
+<h4 class="pattern-title">Controller&#39;s Purification (entity → bool | null)<a
+    href="#patterns/mounts@hyperhexcast:isdrvr"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
+  <details class="details-collapsible">
+    <summary class="collapse-details collapse-spell"></summary>
+    <div class="dropdown spell-settings-dropdown">
+      <span
+        href=""
+        class="dropdown-toggle spell-settings-toggle"
+        data-toggle="dropdown"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="bi bi-gear-fill"></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Renders</a>
+          <ul class="dropdown-menu dropdown-menu-left render-dropdowns"></ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Palettes</a>
+          <ul class="dropdown-menu dropdown-menu-left palette-dropdowns"></ul>
+        </li>
+      </ul>
+    </div>
+      <canvas
+        class="spell-viz"
+        width="216"
+        height="216"
+        data-string="aqadea"
+        data-start="south_west"
+        data-per-world="False"
+      >Your browser does not support visualizing patterns. Pattern code: aqadea</canvas>
+  </details>
+      <p>Returns whether or not the given entity is considered the &#34;Driver&#34; of its vehicle. Null if the entity isn&#39;t riding a vehicle.</p>
+  </div>
+<br />
+</div>
+</section>
+<section id="patterns/spells">
+    <h2 class="category-title page-header">
+    <img
+      title="Enchanted Book"
+      alt="Enchanted Book"
+      src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/enchanted_book.png"
+      loading="lazy"
+      class="item-texture  texture pixelated"
+    >Spells<a
+    href="#table-of-contents"
+    class="permalink small"
+    title="Jump to top"
+  ><i class="bi bi-box-arrow-up"></i></a><a
+    href="#patterns/spells"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h2>
+    <p>Patterns and actions that perform a magical effect on the world.</p>
+<div id="patterns/spl_mounts" class="entry">
+    <h3 class="entry-title page-header">
+    <img
+      title="Saddle"
+      alt="Saddle"
+      src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/a14c64362abe4a12c2dfd87f8d1673af9d1b09f4/data/1.20.2/items/saddle.png"
+      loading="lazy"
+      class="item-texture  texture pixelated"
+    >Mount Spells<a
+    href="#table-of-contents"
+    class="permalink small"
+    title="Jump to top"
+  ><i class="bi bi-box-arrow-up"></i></a><a
+    href="#patterns/spl_mounts"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h3>
+  <div id="patterns/spl_mounts@hyperhexcast:mount" class="">
+<h4 class="pattern-title">Mount Entity (entity, entity → entity)<a
+    href="#patterns/spl_mounts@hyperhexcast:mount"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
+  <details class="details-collapsible">
+    <summary class="collapse-details collapse-spell"></summary>
+    <div class="dropdown spell-settings-dropdown">
+      <span
+        href=""
+        class="dropdown-toggle spell-settings-toggle"
+        data-toggle="dropdown"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="bi bi-gear-fill"></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Renders</a>
+          <ul class="dropdown-menu dropdown-menu-left render-dropdowns"></ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Palettes</a>
+          <ul class="dropdown-menu dropdown-menu-left palette-dropdowns"></ul>
+        </li>
+      </ul>
+    </div>
+      <canvas
+        class="spell-viz"
+        width="216"
+        height="216"
+        data-string="eadewde"
+        data-start="south_east"
+        data-per-world="False"
+      >Your browser does not support visualizing patterns. Pattern code: eadewde</canvas>
+  </details>
+      <p>Make an entity ride another entity. Costs about 2 <a href="https://hexcasting.hexxy.media/v/0.11.2/1.0/en_us#items/amethyst"><span style="color: #b0b">Amethyst Dust</span></a>, or 1 if you are at the top of the stack.</p>
+  </div>
+<br />
+    <p>It seems that there are cases where nature won&#39;t allow this spell to execute, but also won&#39;t mishap? This seems very interesting...</p>
+<br />
+  <div id="patterns/spl_mounts@hyperhexcast:dismount" class="">
+<h4 class="pattern-title">Dismount Entity (entity →)<a
+    href="#patterns/spl_mounts@hyperhexcast:dismount"
+    class="permalink small"
+    title="Permalink"
+  ><i class="bi bi-link-45deg"></i></a></h4>
+  <details class="details-collapsible">
+    <summary class="collapse-details collapse-spell"></summary>
+    <div class="dropdown spell-settings-dropdown">
+      <span
+        href=""
+        class="dropdown-toggle spell-settings-toggle"
+        data-toggle="dropdown"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="bi bi-gear-fill"></i>
+      </span>
+      <ul class="dropdown-menu">
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Renders</a>
+          <ul class="dropdown-menu dropdown-menu-left render-dropdowns"></ul>
+        </li>
+        <li class="dropdown-submenu">
+          <a
+            href=""
+            class="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >Palettes</a>
+          <ul class="dropdown-menu dropdown-menu-left palette-dropdowns"></ul>
+        </li>
+      </ul>
+    </div>
+      <canvas
+        class="spell-viz"
+        width="216"
+        height="216"
+        data-string="qawqadq"
+        data-start="west"
+        data-per-world="False"
+      >Your browser does not support visualizing patterns. Pattern code: qawqadq</canvas>
+  </details>
+      <p>Make an entity stop riding the entity they are riding. Costs about 2 <a href="https://hexcasting.hexxy.media/v/0.11.2/1.0/en_us#items/amethyst"><span style="color: #b0b">Amethyst Dust</span></a>, or 1 when cast on yourself (but why would you).</p>
+  </div>
+<br />
+</div>
+</section>
+  </main>
+</div>
+      <footer class="footer">
+        <div class="container text-muted">
+          <p>Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</p><p>Minecraft content and materials are the intellectual property of their respective owners.</p><p>Made with ❤️ using <a href="https://pypi.org/project/hexdoc/" target="_blank">hexdoc</a>.</p>
+        </div>
+      </footer>
+  </body>
+</html>
