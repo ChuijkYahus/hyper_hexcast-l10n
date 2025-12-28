@@ -10,9 +10,11 @@ import at.petrak.hexcasting.api.casting.getEntity
 import at.petrak.hexcasting.api.casting.iota.EntityIota
 import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.mishaps.Mishap
+import at.petrak.hexcasting.api.misc.MediaConstants
 import at.petrak.hexcasting.api.pigment.FrozenPigment
 import net.minecraft.network.chat.Component
 import net.minecraft.world.entity.Entity
+import net.minecraft.world.entity.player.Player
 import net.minecraft.world.item.DyeColor
 
 object GetMount : ConstMediaAction {
@@ -69,7 +71,7 @@ object Mount : SpellAction {
 
         return SpellAction.Result(
             Spell(rider, mount),
-            if (rider == env.castingEntity) 1L else 2L,
+            if (rider == env.castingEntity) MediaConstants.DUST_UNIT else (if (rider is Player) (5L * MediaConstants.DUST_UNIT) else (2L * MediaConstants.DUST_UNIT)),
             listOf(ParticleSpray.cloud(mount.position().add(0.0, mount.eyeHeight / 2.0, 0.0), 1.0))
         )
     }
@@ -90,7 +92,7 @@ object Dismount : SpellAction {
 
         return SpellAction.Result(
             Spell(rider),
-            if (rider == env.castingEntity) 1L else 2L,
+            if (rider == env.castingEntity) (MediaConstants.DUST_UNIT / 1000) else MediaConstants.DUST_UNIT,
             listOf(ParticleSpray.cloud(rider.position().add(0.0, rider.eyeHeight / 2.0, 0.0), 1.0))
         )
     }

@@ -10,7 +10,7 @@
       op_id: "hyperhexcast:mount",
       anchor: "hyperhexcast:mount",
       input: "entity, entity",
-      output: "entity",
+      output: "",
       text: "hyperhexcast.book.patterns.spells.mounts.mount",
     }, {
       "type": "patchouli:text",

@@ -10,7 +10,7 @@
       op_id: "hyperhexcast:getmt",
       anchor: "hyperhexcast:getmt",
       input: "entity",
-      output: "entity",
+      output: "entity | null",
       text: "hyperhexcast.book.patterns.mounts.getmt",
     }, {
       type: "hexcasting:pattern",
